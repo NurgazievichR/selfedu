@@ -1,0 +1,19 @@
+{% extends 'selfApp/base.html' %}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<div class="div" style="display:flex;">
+    
+
+    {% if post.photo %}
+    <p><img style="width: 90%;" src="{{ post.photo.url }}" alt="..."></p>
+    {% endif %}
+    
+     <span style="width: 70%;">{{ post.content | linebreaks }}  </span>
+    
+    </div>
+
+
+{% endblock %}
+
